@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitecture.data
+package com.example.mvvmcleanarchitecture.data.model.tvshow
 
 
 import com.google.gson.annotations.SerializedName
