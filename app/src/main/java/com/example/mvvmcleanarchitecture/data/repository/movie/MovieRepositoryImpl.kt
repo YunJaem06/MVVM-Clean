@@ -2,15 +2,15 @@ package com.example.mvvmcleanarchitecture.data.repository.movie
 
 import android.util.Log
 import com.example.mvvmcleanarchitecture.data.model.movie.Movie
-import com.example.mvvmcleanarchitecture.data.repository.movie.datasource.ArtistCacheDataSource
-import com.example.mvvmcleanarchitecture.data.repository.movie.datasource.ArtistLocalDataSource
-import com.example.mvvmcleanarchitecture.data.repository.movie.datasource.ArtistRemoteDataSource
+import com.example.mvvmcleanarchitecture.data.repository.movie.datasource.MovieCacheDataSource
+import com.example.mvvmcleanarchitecture.data.repository.movie.datasource.MovieLocalDataSource
+import com.example.mvvmcleanarchitecture.data.repository.movie.datasource.MovieRemoteDataSource
 import com.example.mvvmcleanarchitecture.domain.repository.MovieRepository
 
 class MovieRepositoryImpl(
-    private val movieRemoteDataSource : ArtistRemoteDataSource,
-    private val movieLocalDataSource: ArtistLocalDataSource,
-    private val movieCacheDataSource: ArtistCacheDataSource
+    private val movieRemoteDataSource : MovieRemoteDataSource,
+    private val movieLocalDataSource: MovieLocalDataSource,
+    private val movieCacheDataSource: MovieCacheDataSource
 ) : MovieRepository {
     override suspend fun getMovies(): List<Movie>? {
         return getMoviesFromCache()
