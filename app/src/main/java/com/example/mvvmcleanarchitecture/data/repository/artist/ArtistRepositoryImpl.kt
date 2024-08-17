@@ -2,7 +2,6 @@ package com.example.mvvmcleanarchitecture.data.repository.artist
 
 import android.util.Log
 import com.example.mvvmcleanarchitecture.data.model.artist.Artist
-import com.example.mvvmcleanarchitecture.data.model.movie.Movie
 import com.example.mvvmcleanarchitecture.data.repository.artist.datasource.ArtistCacheDataSource
 import com.example.mvvmcleanarchitecture.data.repository.artist.datasource.ArtistLocalDataSource
 import com.example.mvvmcleanarchitecture.data.repository.artist.datasource.ArtistRemoteDataSource
