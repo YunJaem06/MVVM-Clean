@@ -1,5 +1,8 @@
 package com.example.mvvmcleanarchitecture.presentation.di.core
 
+import com.example.mvvmcleanarchitecture.presentation.di.artist.ArtistSubComponent
+import com.example.mvvmcleanarchitecture.presentation.di.movie.MovieSubComponent
+import com.example.mvvmcleanarchitecture.presentation.di.tvshow.TvShowSubComponent
 import dagger.Component
 import javax.inject.Singleton
 
@@ -16,8 +19,8 @@ import javax.inject.Singleton
 ])
 interface AppComponent {
 
-    fun movieSubComponent():MovieSubComponent.Factory
-    fun tvShowSubComponent():TvShowSubComponent.Factory
-    fun artistSubComponent():ArtistSubComponent.Factory
+    fun movieSubComponent(): MovieSubComponent.Factory
+    fun tvShowSubComponent(): TvShowSubComponent.Factory
+    fun artistSubComponent(): ArtistSubComponent.Factory
 
 }
