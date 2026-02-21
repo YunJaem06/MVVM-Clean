@@ -1,4 +1,4 @@
-package com.example.mvvmcleanarchitecture.presentation.di
+package com.example.mvvmcleanarchitecture.presentation.di.core
 
 import com.example.mvvmcleanarchitecture.data.api.TMDBService
 import dagger.Module
