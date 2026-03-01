@@ -6,9 +6,11 @@ import com.example.mvvmcleanarchitecture.data.db.ArtistDao
 import com.example.mvvmcleanarchitecture.data.db.MovieDao
 import com.example.mvvmcleanarchitecture.data.db.TMDBDatabase
 import com.example.mvvmcleanarchitecture.data.db.TvShowDao
+import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
+@Module
 class DataBaseModule {
 
     @Singleton
