@@ -7,18 +7,19 @@ plugins {
 
 android {
     namespace 'com.example.mvvmcleanarchitecture'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.mvvmcleanarchitecture"
         minSdk 24
-        targetSdk 34
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "TMDB_API_KEY", "\"a2b2c4bb310ebd363e399eb3d6dc5f7a\""
+        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
 
     }
 
@@ -42,14 +43,17 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.17.0'
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.13.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    implementation 'androidx.activity:activity-ktx:1.12.4'
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.appcompat:appcompat:1.7.1"
+    implementation "com.google.android.material:material:1.13.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.2.1"
+    implementation "androidx.activity:activity-ktx:1.8.2"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
 
     // lifecycle scope
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
@@ -68,6 +72,8 @@ dependencies {
     // dagger
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
 
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
