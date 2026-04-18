@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".presentation.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -26,7 +28,8 @@
         <activity android:name=".presentation.movie.MovieActivity"
             android:exported="false"/>
         <activity android:name=".presentation.artist.ArtistActivity"
-            android:exported="false"/>
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".presentation.tv.TvShowActivity"
             android:exported="false"/>
     </application>
